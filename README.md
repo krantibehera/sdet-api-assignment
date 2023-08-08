@@ -4,7 +4,7 @@ All the integration test for API's will be automated in this repo using Java, Re
 ### To start with the project
 * Maven should be installed and configured
 * Java should be installed and configured preferable java20
-* clone the repository
+* clone the repository (Branch : main)
 * Import the project into an IDE and install cucumber plugin
 
 
