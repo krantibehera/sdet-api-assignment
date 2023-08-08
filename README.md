@@ -14,7 +14,7 @@ All the integration test for API's will be automated in this repo using Java, Re
 * Feature file has been parameterised with examples.
 * Test execution can be triggered form command line
 * Easy integration to CI/CD pipeline
-* Design pattern (Singleton, Factory, Builder) and all oops concepts used
+* Design pattern (Singleton, Factory, Builder) and all the oops concepts used
 
 ## Running Test:
 * To execute the tests run **"mvn test verify"** or open cucumber/Options/TestRunner.java and right click run test runner
