@@ -4,7 +4,7 @@ Feature: Validating Users API's
 		Given User create request specification
 
 	@Sanity
-Scenario Outline: Verify all the users list
+Scenario Outline: Verify users list is reterived using GetUserAPI
 	When user calls "GetUserAPI" with "GET" http request
 	Then the API call got success with status code 200
 	And user list is returned
@@ -15,7 +15,7 @@ Scenario Outline: Verify all the users list
 	|Bret 	 |
 
 	@Sanity
-	Scenario Outline: Verify get user details by UserName
+	Scenario Outline: Verify user details is reterived by passing UserName using GetUserAPI
 		When user calls "GetUserAPI" for "username" "<username>" with "GET" http request
 		Then the API call got success with status code 200
 		And user list is returned
@@ -27,7 +27,7 @@ Scenario Outline: Verify all the users list
 			|Bret 	 |  1 |
 
 	@Sanity
-	Scenario Outline: Verify get user details by UserId
+	Scenario Outline: Verify user details is reterived by passing userid using GetUserAPI
 		When user calls "GetUserAPI" for "id" "<id>" with "GET" http request
 		Then the API call got success with status code 200
 		And user list is returned
@@ -39,7 +39,7 @@ Scenario Outline: Verify all the users list
 			|1 	 |  1 |Bret    |
 
 	@Sanity
-	Scenario Outline: Verify get user details with Invalid userId
+	Scenario Outline: Verify user details is not reterived by passing invalid userid using GetUserAPI
 		When user calls "GetUserAPI" "id" "<id>" with "GET" http request
 		Then the API call got success with status code 404
 

@@ -3,7 +3,6 @@ Feature: Validating Post API's
 	Background: User generates token for Authorization
 		Given User create request specification
 
-
 	@Sanity
 Scenario Outline: Verify if a new post is being succesfully added using AddPostAPI
 	Given User Create Payload with <userId>  "<title>" "<body>"
@@ -19,7 +18,7 @@ Examples:
 	|1 			 |  Kranti Post |My First Post|
 
 	@Sanity
-Scenario Outline: Verify if Update a Post functionality is working
+Scenario Outline: Verify if an existing post is being succesfully updated using UpdatePostAPI
 	Given User Create Payload with <userId>  "<title>" "<body>"
 	When user calls "UpdatePostAPI" "id" "<id>" with "PUT" http request
 	Then the API call got success with status code 200
@@ -32,7 +31,7 @@ Examples:
 	|1 			 |Kranti Post One  |My Second Post |1 |
 
 @Sanity
-Scenario Outline: Verify if an user can reterive a Post using given userID
+Scenario Outline: Verify if an user can reterive a post for a given userID using GetPostAPI
 	When user calls "GetPostAPI" for "userId" "<userId>" with "GET" http request
 	Then the API call got success with status code 200
 	And all the "userId" in response body list is <userId>
@@ -42,7 +41,7 @@ Scenario Outline: Verify if an user can reterive a Post using given userID
 		|1 		|
 
 	@Sanity
-Scenario Outline: Verify if an user can delete a Post using given userID
+Scenario Outline: Verify if an user can delete an user's post for a given userID using DeletePostAPI
 	When user calls "DeletePostAPI" "userId" "<userId>" with "Delete" http request
 	Then the API call got success with status code 200
 
@@ -51,7 +50,7 @@ Scenario Outline: Verify if an user can delete a Post using given userID
 	|1 		|
 
 	@Sanity
-Scenario Outline: Verify if an user can reterive a Post using an invalid userID
+Scenario Outline: Verify an user should not reterive a post using an invalid userID
 	When user calls "GetPostAPI" "id" "<id>" with "GET" http request
 	Then the API call got success with status code 404
 	Examples:
