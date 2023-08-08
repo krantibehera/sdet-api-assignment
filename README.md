@@ -19,6 +19,6 @@ All the integration test for API's will be automated in this repo using Java, Re
 ## Running Test:
 * To execute the tests run **"mvn test verify"** or open cucumber/Options/TestRunner.java and right click run test runner
 * Logs can be found in **logging.txt** file
-* Test reports can be found in folder **/target/cucumber-html-reports/report-features.html**
+* Test reports can be found in folder **/target/cucumber-html-reports/overview-features.html**
 * Json report can be found in **\target\jsonReports**
 
